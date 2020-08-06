@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Web Visualization Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
+
+    <!-- Bootstrap core CSS 
+    <link href="assets/dist/css/bootstrap.css" rel="stylesheet"> -->
+
+    <!-- Bootstrap Customized CSS-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+
+    <!-- Leaflet Icons -->
+    <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/leaflet.extra-markers.min.css">
+
+    <!-- Our CSS -->
+    <!-- Custom styles for this template -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+
+    <!-- This is grouping the "brand" and toggle together for "better display"-->
+    <!--<div class="container-fluid"><div class="navbar-header">
+                <a class="navbar-brand" style="color:#20415b">
+                    <img src="https://portlandgeneral.com/-/media/public/our-company/energy-strategy/images/header-smart-grid-test-bed.jpg?w=1600%27&w=1600%27"
+                        width="30" height="30" class="d-inline-block align-top" alt="">
+                    Testbed Internet
+                </a>
+            </div>-->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-secondary navbar-fixed-top-affix-top">
+        <!-- fixed-top-->
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <!-- MAIN CONTENT SECTION -->
+    <main id="border" role="main" class="container-fluid" style="background-color:pink;">
+        <div class="row" style="min-height:400px;">
+            <div class="col-md-7 bg-secondary" id="summary-box">
+                <!--<div class="row"></div>-->
+                <div class="col-md-12">
+                    <h1>Latitude vs. Weather</h1>
+                    <hr>
+
+                    <p class="lead">
+                        <img src="assets/graphs/Latitude_MaxTemp.png"
+                            alt="this is an image showing an example plot from the analysis" align="left" width="50%">
+                        This project involved analyzing weather data to understand whether latitude has a bigger factor
+                        on
+                        temperature than various weather attributes.
+                        Data source: OpenWeatherMap API; > 500 cities.</p>
+                </div>
+            </div>
+            <div class="col-md-5 bg-primary">
+                <h1>Plots</h1>
+                <hr>
+                <div class="col-md-12 bg-secondary">
+                    <img src="assets/graphs/Latitude_MaxTemp.png"
+                        alt="this is an image showing an example plot from the analysis" width="50%">
+                    <!--</div>
+                <div class="col-md-6 bg-secondary">-->
+                    <img src="assets/graphs/Latitude_Cloudiness.png"
+                        alt="this is an image showing an example plot from the analysis" width="50%" align="right">
+                </div>
+                <div class="col-md-12 bg-secondary">
+                    <img src="assets/graphs/Latitude_Humidity.png"
+                        alt="this is an image showing an example plot from the analysis" width="50%">
+                    <!--</div>
+                <div class="col-md-6 bg-secondary">-->
+                    <img src="assets/graphs/Latitude_WindSpeed.png"
+                        alt="this is an image showing an example plot from the analysis" width="50%" align="right">
+                </div>
+            </div>
+
+
+        </div>
+    </main><!-- /.container -->
+
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <!--<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.slim.min.js"><\/script>')</script>-->
+
+    <!-- BOOTSTRAP JS-->
+    <script src="assets/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- MomentJS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+
+    <!-- Leaflet JavaScript -->
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+    <!-- Icons -->
+    <script src="assets/js/leaflet.extra-markers.min.js"></script>
+
+    <!-- polyfill.io is library for using newer JavaScript features in older browers (such as Object.assign) -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
+    <!-- API Key -->
+    <script type="text/javascript" src="assets/js/config.js"></script>
+
+    <!-- Our JavaScript -->
+    <script type="text/javascript" src="assets/js/logic.js"></script>
+
+</body>
+
+</html>
