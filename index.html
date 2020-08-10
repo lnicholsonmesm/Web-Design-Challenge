@@ -37,17 +37,18 @@
 
 
     <!-- Google Font -->
-
-    <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
-
-    <!-- Leaflet CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <!-- Leaflet CSS 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-        crossorigin="" />
+        crossorigin="" />-->
 
-    <!-- Leaflet Icons -->
+    <!-- Leaflet Icons 
     <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/leaflet.extra-markers.min.css">
+-->
 
     <!-- Our CSS -->
     <!-- Custom styles for this template -->
@@ -69,8 +70,9 @@
             </div>-->
 
     <nav class="navbar navbar-expand-md navbar-dark bg-secondary navbar-fixed-top-affix-top">
+        <!---or sticky-top-->
         <!-- fixed-top-->
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#"><img src="assets/brand/L.png" height="30px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -79,21 +81,25 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="data.html">Data</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="comparisons.html">Comparisons</a>
+                </li>
+                <!--<li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
+                </li>-->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        aria-haspopup="true" aria-expanded="false">Visualizations</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="visualizations/humidity.html">Temperature</a>
+                        <a class="dropdown-item" href="visualizations/clouds.html">Cloudiness</a>
+                        <a class="dropdown-item" href="visualizations/temperature.html">Humidity</a>
+                        <a class="dropdown-item" href="visualizations/wind.html">Wind Speed</a>
                     </div>
                 </li>
             </ul>
@@ -106,80 +112,78 @@
 
 
     <!-- MAIN CONTENT SECTION -->
-    <main id="border" role="main" class="container-fluid" style="background-color:pink;">
+    <main id="border" role="main" class="container-fluid">
         <div class="row" style="min-height:400px;">
-            <div class="col-md-7 bg-secondary" id="summary-box">
+            <div class="col-md-7" id="summary-box">
                 <!--<div class="row"></div>-->
                 <div class="col-md-12">
-                    <h1>Latitude vs. Weather</h1>
-                    <hr>
-
-                    <p class="lead">
-                        <img src="assets/graphs/Latitude_MaxTemp.png"
-                            alt="this is an image showing an example plot from the analysis" align="left" width="50%">
-                        This project involved analyzing weather data to understand whether latitude has a bigger factor
-                        on
-                        temperature than various weather attributes.
-                        Data source: OpenWeatherMap API; > 500 cities.</p>
+                    <div class="card bg-dark mb-12">
+                        <h1 class="card-header">Summary: Does Latitude Affect Weather?</h1>
+                        <div class="card-body">
+                            <img class="pull-left mr-4" src="assets/graphs/Latitude_MaxTemp.png"
+                                alt="this is an image showing an example plot from the analysis" align="left"
+                                width="60%">
+                            <p>
+                                These graphs show the analysis of over 500 cities using OpenWeatherMap API data. The
+                                primary question given for this analysis was,</p>
+                            <p> "Does a city's latitude impact its expected weather?" </p>
+                            <p><i class="fas fa-cat"></i></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-5 bg-primary">
-                <h1>Plots</h1>
-                <hr>
-                <div class="col-md-12 bg-secondary">
-                    <img src="assets/graphs/Latitude_MaxTemp.png"
-                        alt="this is an image showing an example plot from the analysis" width="50%">
-                    <!--</div>
+            <div class="col-md-5">
+                <div class="col-md-12">
+                    <div class="card bg-dark">
+                        <h1 class="card-header"><a href="comparisons.html" style="color: #edede3">Plots</a></h1>
+                        <div class="card-body">
+                            <div class="col-md-12">
+                                <a href="visualizations/temperature.html"><img src="assets/graphs/Latitude_MaxTemp.png"
+                                        alt="this is an image showing an example plot from the analysis"
+                                        title="Temperature vs Latitude" width="50%"></a>
+                                <!--</div>
                 <div class="col-md-6 bg-secondary">-->
-                    <img src="assets/graphs/Latitude_Cloudiness.png"
-                        alt="this is an image showing an example plot from the analysis" width="50%" align="right">
-                </div>
-                <div class="col-md-12 bg-secondary">
-                    <img src="assets/graphs/Latitude_Humidity.png"
-                        alt="this is an image showing an example plot from the analysis" width="50%">
-                    <!--</div>
+                                <a href="visualizations/clouds.html"><img src="assets/graphs/Latitude_Cloudiness.png"
+                                        alt="this is an image showing an example plot from the analysis"
+                                        title="Cloudiness vs Latitude" width="50%" align="right">
+                            </div>
+                            <div class="col-md-12">
+                                <a href="visualizations/humidity.html"><img src="assets/graphs/Latitude_Humidity.png"
+                                        alt="this is an image showing an example plot from the analysis"
+                                        title="Humidity vs Latitude" width="50%"></a>
+                                <!--</div>
                 <div class="col-md-6 bg-secondary">-->
-                    <img src="assets/graphs/Latitude_WindSpeed.png"
-                        alt="this is an image showing an example plot from the analysis" width="50%" align="right">
+                                <a href="visualizations/wind.html"><img src="assets/graphs/Latitude_WindSpeed.png"
+                                        alt="this is an image showing an example plot from the analysis"
+                                        title="Wind Speed vs Latitude" width="50%" align="right"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
 
         </div>
     </main><!-- /.container -->
+    <footer class="footer mt-auto bg-primary text-center">
+        <div class="container">
+            <span class="text-light"><i class="fas fa-cat"></i> Laura Nicholson, 2020</span>
+        </div>
+    </footer>
 
-    <!-- D3 -->
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-------------------------JS FILES----------------------------------->
 
     <!-- JQUERY-->
+    <script src="assets/js/all.js">
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <!--<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.slim.min.js"><\/script>')</script>-->
 
     <!-- BOOTSTRAP JS-->
-    <script src="assets/dist/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
 
-    <!-- MomentJS -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
-
-    <!-- Leaflet JavaScript -->
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-        crossorigin=""></script>
-
-    <!-- Icons -->
-    <script src="assets/js/leaflet.extra-markers.min.js"></script>
-
-    <!-- polyfill.io is library for using newer JavaScript features in older browers (such as Object.assign) -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-
-    <!-- API Key -->
-    <script type="text/javascript" src="assets/js/config.js"></script>
-
-    <!-- Our JavaScript -->
-    <script type="text/javascript" src="assets/js/logic.js"></script>
 
 </body>
 
