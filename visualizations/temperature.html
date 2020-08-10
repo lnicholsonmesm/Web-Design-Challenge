@@ -58,17 +58,6 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
-
-    <!-- This is grouping the "brand" and toggle together for "better display"-->
-    <!--<div class="container-fluid"><div class="navbar-header">
-                <a class="navbar-brand" style="color:#20415b">
-                    <img src="https://portlandgeneral.com/-/media/public/our-company/energy-strategy/images/header-smart-grid-test-bed.jpg?w=1600%27&w=1600%27"
-                        width="30" height="30" class="d-inline-block align-top" alt="">
-                    Testbed Internet
-                </a>
-            </div>-->
-
     <nav class="navbar navbar-expand-md navbar-dark bg-secondary navbar-fixed-top-affix-top">
         <!---or sticky-top-->
         <!-- fixed-top-->
@@ -117,24 +106,30 @@
             <div class="col-md-8" id="summary-box">
                 <!--<div class="row"></div>-->
                 <div class="col-md-12">
-                    <div class="card bg-dark mb-12">
-                        <h1 class="card-header">Max Temperatures vs Latitude</h1>
-                        <div class="card-body">
+                    <div class="card bg-dark mb-12 align-items-center">
+                        <h1 class="card-header">Latitude and Max Temperatures </h1>
+                        <div class="card-body justify-content-center">
                             <img class="mr-4" src="../assets/graphs/Latitude_MaxTemp.png"
-                                alt="Image of Temperature vs Latitude" align="center" width="85%">
-                            <hr>
+                                alt="Image of Temperature vs Latitude" align="center" width="97%">
+                        </div>
+                        <div class="card-body">
                             <p>
-                                These graphs show the analysis of over 500 cities using OpenWeatherMap API data. The
-                                primary question given for this analysis was,</p>
-                            <p> "How does latitude impact temperature
-                                relative to the impacts from other weather conditions?" <i class="fas fa-cat"></i></p>
+                                These data are closely bunched and appear to make a rainbow-like shape, peaked between 0
+                                and 20. As latitudes move away from the equator and towards the poles, max temperatures
+                                decrease.</p>
+                            <p>Breaking these data out by Northern and Southern Hemispheres, the visual, linear trend in
+                                max temperatures is clear, supported by a linear regression with p-values that are so
+                                tiny I thought I might be making a mistake. As latitudes move away from the equator and
+                                towards the poles, max temperatures decrease.</p>
+                            <p> <i class="fas fa-cat"></i>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card bg-dark">
-                    <h1 class="card-header">Plots</h1>
+                    <h2 class="card-header">Plots</h2>
                     <div class="card-body">
                         <a href="./clouds.html"><img src="../assets/graphs/Latitude_Cloudiness.png"
                                 alt="Image of Cloudiness vs Latitude" title="Cloudiness vs Latitude" width="100%"

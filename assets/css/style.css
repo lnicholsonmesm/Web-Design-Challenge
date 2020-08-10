@@ -3,7 +3,10 @@ body {
   padding-top: 0rem;
   padding-bottom: 1rem;
 }
-
+/*@media (max-width: 200px) {
+  .nav-navbar {
+    background: #edede3;
+  }*/
 .footer {
   position: fixed;
   bottom: 0;

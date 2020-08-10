@@ -58,17 +58,6 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
-
-    <!-- This is grouping the "brand" and toggle together for "better display"-->
-    <!--<div class="container-fluid"><div class="navbar-header">
-                <a class="navbar-brand" style="color:#20415b">
-                    <img src="https://portlandgeneral.com/-/media/public/our-company/energy-strategy/images/header-smart-grid-test-bed.jpg?w=1600%27&w=1600%27"
-                        width="30" height="30" class="d-inline-block align-top" alt="">
-                    Testbed Internet
-                </a>
-            </div>-->
-
     <nav class="navbar navbar-expand-md navbar-dark bg-secondary navbar-fixed-top-affix-top">
         <!---or sticky-top-->
         <!-- fixed-top-->
@@ -117,23 +106,27 @@
             <div class="col-md-8" id="summary-box">
                 <!--<div class="row"></div>-->
                 <div class="col-md-12">
-                    <div class="card bg-dark mb-12">
-                        <h1 class="card-header">Wind Speed vs Latitude</h1>
-                        <div class="card-body">
+                    <div class="card bg-dark mb-12 align-items-center">
+                        <h1 class="card-header">Latitude and Wind Speeds</h1>
+                        <div class="card-body justify-content-center">
                             <img class="mr-4" src="../assets/graphs/Latitude_WindSpeed.png"
-                                alt="Image of Max Temperature vs Latitude" align="center" width="85%">
-                            <p>
-                                These graphs show the analysis of over 500 cities using OpenWeatherMap API data. The
-                                primary question given for this analysis was,</p>
-                            <p> "How does latitude impact temperature
-                                relative to the impacts from other weather conditions?" <i class="fas fa-cat"></i></p>
+                                alt="Image of Max Temperature vs Latitude" align="center" width="97%"></div>
+                        <div class="card-body">
+                            <p>Wind speeds appear chaotic without
+                                very recognizable patterns. They appear clustered near low values, but this could be due
+                                to the one outlier squashing the rest of the data together visually.</p>
+                            <p>At a 95% confidence level, wind speeds in the Northern Hemisphere yielded statistically
+                                significant results, showing a moderate correlation with higher wind speeds at higher
+                                latitudes; this may be worth examining with the outlier removed, as the variation in
+                                speeds are within 3 m/s.</p>
+                            <p> <i class="fas fa-cat"></i></p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card bg-dark">
-                    <h1 class="card-header">Plots</h1>
+                    <h2 class="card-header">Plots</h2>
                     <div class="card-body">
                         <a href="./temperature.html"><img src="../assets/graphs/Latitude_MaxTemp.png"
                                 alt="Image of Max Temperature vs Latitude" title="Temperature vs Latitude"

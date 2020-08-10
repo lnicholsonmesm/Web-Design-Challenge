@@ -58,17 +58,6 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
-
-    <!-- This is grouping the "brand" and toggle together for "better display"-->
-    <!--<div class="container-fluid"><div class="navbar-header">
-                <a class="navbar-brand" style="color:#20415b">
-                    <img src="https://portlandgeneral.com/-/media/public/our-company/energy-strategy/images/header-smart-grid-test-bed.jpg?w=1600%27&w=1600%27"
-                        width="30" height="30" class="d-inline-block align-top" alt="">
-                    Testbed Internet
-                </a>
-            </div>-->
-
     <nav class="navbar navbar-expand-md navbar-dark bg-secondary navbar-fixed-top-affix-top">
         <!---or sticky-top-->
         <!-- fixed-top-->
@@ -117,12 +106,14 @@
             <div class="col-md-8" id="summary-box">
 
                 <div class="card bg-dark mb-12 align-items-center">
-                    <h1 class="card-header">Latitude vs Cloudiness</h1>
+                    <h1 class="card-header">Latitude and Cloudiness</h1>
 
-                    <div class="card-body text-center">
+                    <div class="card-body justify-content-center">
                         <img class="card-img-center" src="../assets/graphs/Latitude_Cloudiness.png"
-                            alt="Image of Clouds vs Latitude" title="Cloudiness vs Latitude" align="" width="80%">
-                        <br><br>
+                            alt="Image of Clouds vs Latitude" title="Cloudiness vs Latitude" align="center"
+                            width="100%">
+                    </div>
+                    <div class="card-body">
                         <p>This plot depicts the reported cloudiness from and the latitudes of different
                             cities
                             across the world. I notice significant clustering at the bottom and top of the
@@ -130,12 +121,19 @@
                             representing 0% and 100% cloudiness ratings, indicating that a lot of location
                             experience full sun or full clouds. However, latitude does not clearly play a
                             part.</p>
-                        <p>There may be some correlation between cloudiness an latitude (cloudier within 10
+                        <p>Cloudiness does appear to have some clustering at the low
+                            and high levels, indicating that there may be some correlation between cloudiness an
+                            latitude (cloudier
+                            within 10
                             degrees
                             of the equator and sunnier 20 to 40 degrees away?), but no conclusions can be
                             drawn
                             without further investigations.</p>
-                        <p> <i class="fas fa-cat"></i></p>
+                        <p>Southern Latitude cloudiness does show significance at a 95% confidence level, but given the
+                            slight nature, it might be worth investigating if there were enough data points at the
+                            furthest south temperatures. R-squared values indicate that the linear fit was not a
+                            particularly good predictor for expected temperatures.</p>
+                        <p> <i class=" fas fa-cat"></i></p>
                     </div>
                 </div>
             </div>
@@ -149,7 +147,8 @@
                         <br><br>
                         <a href="./wind.html"><img src="../assets/graphs/Latitude_WindSpeed.png"
                                 alt="this is an image showing an example plot from the analysis"
-                                title="Wind Speed vs Latitude" width="100%" align="right"></a><br><br>
+                                title="Wind Speed vs Latitude" width="100%" align=""></a>
+                        <br><br>
                         <a href="./temperature.html"><img src="../assets/graphs/Latitude_MaxTemp.png"
                                 alt="Image of Max Temperature vs Latitude" title="Temperature vs Latitude"
                                 width="100%"></a>
